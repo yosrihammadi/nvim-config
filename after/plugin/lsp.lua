@@ -65,13 +65,13 @@ cmp.setup({
 	}),
 })
 
--- Execute ESLint on save
-vim.api.nvim_exec(
-	[[
-  autocmd BufWritePost *.js,*.jsx,*.mjs,*.ts,*.tsx,*.vue !eslint --fix %
-]],
-	false
-)
+-- -- Execute ESLint on save
+-- vim.api.nvim_exec(
+-- 	[[
+--   autocmd BufWritePost *.js,*.jsx,*.mjs,*.ts,*.tsx,*.vue !eslint --fix %
+-- ]],
+-- 	false
+-- )
 
 -- Highlight ESLint errors
 vim.g.ale_linters = {
