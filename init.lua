@@ -43,7 +43,7 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig" },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
-	{ "L3MON4D3/LuaSnip" },
+	{ "saadparwaiz1/cmp_luasnip" },
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
@@ -108,4 +108,16 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
+	"tribela/vim-transparent",
+	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
+	},
+	{ "rafamadriz/friendly-snippets" },
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
