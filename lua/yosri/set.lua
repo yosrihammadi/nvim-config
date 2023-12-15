@@ -40,12 +40,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
 vim.cmd("highlight! link HighlightYank IncSearch")
 
 -- Enable the highlight for yanked text
-vim.api.nvim_exec(
-	[[
-  augroup YankHighlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank({ higroup = 'HighlightYank', timeout = 100 })
-  augroup END
-]],
-	false
-)
+vim.g.highlightedyank_highlight_duration = 50

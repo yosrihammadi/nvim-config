@@ -118,9 +118,10 @@ require("lazy").setup({
 		build = "make install_jsregexp",
 	},
 	{ "rafamadriz/friendly-snippets" },
-	{ "akinsho/bufferline.nvim", version = "*" },
-	{ "nvim-lualine/lualine.nvim" },
-	"xiyaowong/transparent.nvim",
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
+	-- "xiyaowong/transparent.nvim",
+	"machakann/vim-highlightedyank",
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
