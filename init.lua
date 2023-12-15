@@ -108,7 +108,7 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
-	"tribela/vim-transparent",
+	-- "tribela/vim-transparent",
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
@@ -118,6 +118,9 @@ require("lazy").setup({
 		build = "make install_jsregexp",
 	},
 	{ "rafamadriz/friendly-snippets" },
+	{ "akinsho/bufferline.nvim", version = "*" },
+	{ "nvim-lualine/lualine.nvim" },
+	"xiyaowong/transparent.nvim",
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()

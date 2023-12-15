@@ -38,3 +38,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
+
+-- buffer navigation
+vim.keymap.set("n", "<Tab>", ":bnext<CR>")
+vim.keymap.set("n", "<S-Tab>", ":bnext<CR>")

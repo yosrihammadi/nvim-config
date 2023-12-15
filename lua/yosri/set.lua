@@ -31,9 +31,21 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
-
 vim.o.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
 	command = "if mode() != 'c' | checktime | endif",
 	pattern = { "*" },
 })
+-- Define a custom highlight group for yanked text
+vim.cmd("highlight! link HighlightYank IncSearch")
+
+-- Enable the highlight for yanked text
+vim.api.nvim_exec(
+	[[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank({ higroup = 'HighlightYank', timeout = 100 })
+  augroup END
+]],
+	false
+)
