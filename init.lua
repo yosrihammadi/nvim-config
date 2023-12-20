@@ -108,7 +108,6 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
-	-- "tribela/vim-transparent",
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
@@ -119,7 +118,7 @@ require("lazy").setup({
 	},
 	{ "rafamadriz/friendly-snippets" },
 	{ "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
-	-- "xiyaowong/transparent.nvim",
+	"xiyaowong/transparent.nvim",
 	"machakann/vim-highlightedyank",
 	"christoomey/vim-tmux-navigator",
 	{
