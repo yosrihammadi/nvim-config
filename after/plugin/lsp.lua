@@ -81,10 +81,10 @@ cmp.setup({
 -- )
 
 -- Highlight ESLint errors
-vim.g.ale_linters = {
-	javascript = { "eslint" },
-	["javascript.jsx"] = { "eslint" },
-	typescript = { "eslint" },
-	["typescript.tsx"] = { "eslint" },
-	vue = { "eslint" },
-}
+-- vim.g.ale_linters = {
+-- 	javascript = { "eslint" },
+-- 	["javascript.jsx"] = { "eslint" },
+-- 	typescript = { "eslint" },
+-- 	["typescript.tsx"] = { "eslint" },
+-- 	vue = { "eslint" },
+-- }

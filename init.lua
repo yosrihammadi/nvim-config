@@ -41,6 +41,8 @@ require("lazy").setup({
 
 	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 	{ "neovim/nvim-lspconfig" },
+	"jose-elias-alvarez/null-ls.nvim",
+	"MunifTanjim/eslint.nvim",
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "saadparwaiz1/cmp_luasnip" },
@@ -110,13 +112,11 @@ require("lazy").setup({
 	},
 	{
 		"L3MON4D3/LuaSnip",
-		dependencies = { "rafamadriz/friendly-snippets" },
 		-- follow latest release.
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 	},
-	{ "rafamadriz/friendly-snippets" },
 	{ "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
 	"xiyaowong/transparent.nvim",
 	"machakann/vim-highlightedyank",
