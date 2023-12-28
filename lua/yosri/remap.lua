@@ -58,3 +58,5 @@ end, { desc = "Previous todo comment" })
 
 vim.keymap.set("n", "<leader>tt", ":TodoTelescope<CR>")
 vim.keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>")
+
+vim.keymap.set("n", "<leader>fl", ":EslintFixAll<CR>")

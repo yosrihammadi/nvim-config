@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	"windwp/nvim-ts-autotag",
 	{ "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
 	"folke/which-key.nvim",
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
@@ -112,13 +113,13 @@ require("lazy").setup({
 	},
 	{
 		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
 		-- follow latest release.
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 	},
 	{ "nvim-lualine/lualine.nvim", dependencies = "nvim-tree/nvim-web-devicons" },
-	"xiyaowong/transparent.nvim",
 	"machakann/vim-highlightedyank",
 	"christoomey/vim-tmux-navigator",
 	{
