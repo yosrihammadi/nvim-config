@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", ":Neotree action=focus reveal=true position=left toggle=true %:p:h<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

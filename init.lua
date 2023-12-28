@@ -97,10 +97,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-cmdline",
 	"hrsh7th/nvim-cmp",
 	{
-		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
+		"terrortylor/nvim-comment",
 		lazy = false,
 	},
 	{
@@ -124,12 +121,17 @@ require("lazy").setup({
 	"christoomey/vim-tmux-navigator",
 	{
 		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
+		cmd = { "TodoTrouble", "TodoTelescope" },
+		config = true,
+  -- stylua: ignore
+  keys = {
+    { "<leader>tn", function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
+    { "<leader>tp", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
+    { "<leader>xt", "<cmd>TodoTrouble<cr>", desc = "Todo (Trouble)" },
+    { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+    { "<leader>st", "<cmd>TodoTelescope<cr>", desc = "Todo" },
+    { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
+  },
 	},
 	{
 		"folke/trouble.nvim",
@@ -143,6 +145,16 @@ require("lazy").setup({
 		},
 	},
 	"f-person/git-blame.nvim",
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
+	},
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
