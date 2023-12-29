@@ -41,3 +41,5 @@ vim.cmd("highlight! link HighlightYank IncSearch")
 
 -- Enable the highlight for yanked text
 vim.g.highlightedyank_highlight_duration = 50
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
