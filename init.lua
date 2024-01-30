@@ -22,7 +22,6 @@ require("lazy").setup({
   "folke/neodev.nvim",
   "ThePrimeagen/harpoon",
   -- { "rose-pine/neovim",                 name = "rose-pine" },
-  "rebelot/kanagawa.nvim",
   "mbbill/undotree",
   {
     "nvim-telescope/telescope.nvim",
@@ -147,7 +146,21 @@ require("lazy").setup({
   },
   "f-person/git-blame.nvim",
   "nvim-tree/nvim-tree.lua",
-  "xiyaowong/transparent.nvim"
+  -- "xiyaowong/transparent.nvim",
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = function()
+      return {
+        transparent = true,
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        }, -- transparent = true,
+      }
+    end,
+  },
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
