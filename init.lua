@@ -85,6 +85,13 @@ require("lazy").setup({
       require("cmp").setup(opts)
     end,
   },
+  {
+    "saadparwaiz1/cmp_luasnip",
+    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+  },
   "norcalli/nvim-colorizer.lua",
   "morhetz/gruvbox",
   "lewis6991/gitsigns.nvim",
@@ -185,20 +192,12 @@ require("lazy").setup({
   "f-person/git-blame.nvim",
   "nvim-tree/nvim-tree.lua",
   -- "xiyaowong/transparent.nvim",
-  {
-    "craftzdog/solarized-osaka.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = function()
-      return {
-        transparent = true,
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-        }, -- transparent = true,
-      }
-    end,
-  },
+  -- Lazy
+  { "rose-pine/neovim",          name = "rose-pine" }
+
+
+  -- somewhere in your config:
 })
 
+vim.cmd("colorscheme rose-pine")
 require("luasnip.loaders.from_vscode").lazy_load()

@@ -1,12 +1,10 @@
 -- Default options:
 -- setup must be called before loading
-vim.cmd("colorscheme solarized-osaka")
-vim.cmd("hi LineNr guibg=NONE")
-vim.cmd("hi GitSignsChange guibg=NONE")
-vim.cmd("hi GitSignsDelete guibg=NONE")
-vim.cmd("hi GitSignsAdd guibg=NONE")
-vim.cmd("hi SignColumn guibg=NONE")
-
+-- vim.cmd("hi LineNr guibg=NONE")
+-- vim.cmd("hi GitSignsChange guibg=NONE")
+-- vim.cmd("hi GitSignsDelete guibg=NONE")
+-- vim.cmd("hi GitSignsAdd guibg=NONE")
+-- vim.cmd("hi SignColumn guibg=NONE")
 
 --
 -- require("rose-pine").setup({

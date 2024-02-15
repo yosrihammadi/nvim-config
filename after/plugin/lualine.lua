@@ -1,8 +1,7 @@
 require("lualine").setup({
   -- FIXME
   options = {
-    -- theme = "rose-pine",
-    theme = "solarized_dark",
+    theme = "rose-pine",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {

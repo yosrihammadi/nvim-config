@@ -10,6 +10,7 @@ local options = {
     vimgrep_arguments = {
       "rg",
       "-L",
+      "--fixed-strings",
       "--color=never",
       "--no-heading",
       "--with-filename",
@@ -59,4 +60,4 @@ local options = {
   extensions_list = { "themes", "terms" },
 }
 
-return options
+require("telescope").setup(options)
