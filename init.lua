@@ -190,7 +190,7 @@ require("lazy").setup({
   },
   "f-person/git-blame.nvim",
   "nvim-tree/nvim-tree.lua",
-  -- "xiyaowong/transparent.nvim",
+  "xiyaowong/transparent.nvim",
   -- Lazy
   { "rose-pine/neovim",          name = "rose-pine" }
 
