@@ -22,7 +22,6 @@ require("lazy").setup({
   "folke/neodev.nvim",
   "ThePrimeagen/harpoon",
   -- { "rose-pine/neovim",                 name = "rose-pine" },
-  "mbbill/undotree",
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
